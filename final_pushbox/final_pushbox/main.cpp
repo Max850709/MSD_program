@@ -11,7 +11,7 @@
 #include <algorithm>
 
 #include "box.hpp"
-#include "user.hpp"
+
 
 int main() {
     
@@ -21,11 +21,13 @@ int main() {
     Box box;
     
     while(box.windowisopen()){
+
         //Update
         box.update();
         //Render
+        
         box.render();
-        //Draw
+        
     }
     
     return 0;

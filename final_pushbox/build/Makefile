@@ -1,5 +1,5 @@
 
-SRCDIR=final_pushbox
+SRCDIR=../final_pushbox
 
 INCLUDE=-I/opt/homebrew/include/
 
@@ -13,14 +13,14 @@ CC=g++
 .PHONY : all
 all : game
 
-OBJS=main.o
+OBJS=main.o box.o
 
-Ball.o : $(SRCDIR)/Ball.cpp
-    $(CC) $(CFLAGS) -c $<
+box.o : $(SRCDIR)/box.cpp
+	$(CC) $(CFLAGS) -c $<
 
 main.o : $(SRCDIR)/main.cpp
-    $(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 game : $(OBJS)
-    $(CC) $(LFLAGS) -o game $(OBJS)
+	$(CC) $(LFLAGS) -o game $(OBJS)
 
